@@ -1,0 +1,42 @@
+WHAT IS JENKINS ?
+
+Jenkins is an open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration, and continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat. It supports version control tools, including AccuRev, CVS, Subversion, Git, Mercurial, Perforce, ClearCase, and RTC, and can execute Apache Ant, Apache Maven, and sbt based projects as well as arbitrary shell scripts and Windows batch commands.
+
+
+JENKINS USES IN DEVOPS ?
+-----------------------------!
+In the realm of DevOps and continuous integration/continuous deployment (CI/CD), Jenkins stands as an iconic tool revered for its pivotal role in automating software development processes.
+
+(JENKINS IS A JAVA-BASED SERVER.)
+
+Jenkins installation Steps:---
+
+Goto instance tack (ubuntu) and key pair. (and exist groups edit lunch-wizard-7 )lunch intances.then instances running go to security groups tack inboundary and rules apply allTrafic and anywhere and port 8080 save it.
+
+Jenkins.io :-  https://pkg.jenkins.io/debian-stable/
+
+sudo apt-get update
+
+  sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+    https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+    https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+  sudo apt-get update
+  sudo apt-get install fontconfig openjdk-17-jre  (java installation)
+  sudo apt-get install Jenkins
+
+systemctl start Jenkins
+systemctl status Jenkins
+java --version
+Jenkins --version 
+(now copy public IP/adderess goto-new website paste P/IP:8080) follow the Instractions save it. NOw JENKINS IS STARTED.
+
+{JENKINS CREATED BY A SONARQUD, JOB,APACHE2,APACHE TOMCAT,APACHE MAVEN, SONATYPE,DOCKER AND CI-CD PIPLINE}
+
+
+JOBS CREAT :-
+Goto Jenkins dashboard - new item -enter item name -select freestyle (ok) -Source Code Management- (in your local install git also)git url paste (https://github.com/MithunTechnologiesDevOps/maven-web-application.git) -add credentials -Jenkins - username Israyal Lakkineti -password - description (GitHub-credentials) -save -Branches to build -*/development -Build Steps - development -apply and save -build now - how to install mvn go to dashboard -manage Jenkins -tools -Add Maven - maven3.9.9 y this mentione only apache 3.9.9 install the version as same -Install automatically - maven3.9.9 - then goto - configure -build step -mvn default add maven3.9.9 - apply and save -build now -now success-then [INFO] Building war: /var/lib/jenkins/workspace/job-creating/target/maven-web-application.war - /var/lib/Jenkins --store with the Jenkins directory.
+
